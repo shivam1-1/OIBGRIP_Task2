@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <title>Tribute Page</title>
+</head>
+
+<body>
+    <header>
+        <p><b>Tribute to KK</b></p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#image">About</a></li>
+            <li><a href="#tribute">Send Tribute</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to the world of KK <span style="font-size:100px;color:red;">&hearts;</span></h1>
+            <p>"One good thing about music, when it hits you, you feel no pain"</p>
+            <p>-Singer KK</p>
+        </section>
+        <section id="image">
+            <figure>
+                <img src="download.jpg" alt="Singer KK">
+                <figcaption>
+                    Krishnakumar Kunnath (23 August 1968 - 31 May 2022)
+                </figcaption>
+            </figure>
+        </section>
+        <section id="about">
+            <table>
+                <thead>
+                    <th>Sr.No.</th>
+                    <th>Bio-data</th>
+                    <th>Details</th>
+                    <th>References</th>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>Name</td>
+                    <td>Krishnakumar Kunnath(KK)</td>
+                    <td><a href="https://www.instagram.com/kk_live_now/?hl=en">Instagram</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Birth Date</td>
+                    <td>23 August 1968</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Died</td>
+                    <td>31 May 2022</td>
+                    <td>cause of death-Cardiac Arrest</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Profession</td>
+                    <td>Playback Singer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Debut Song</td>
+                    <td>Pal</td>
+                    <td><a href="https://www.youtube.com/watch?v=NUqlCJTYu6I">Pal</a></td>
+                </tr>
+            </table>
+        </section>
+        <section id="info">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Krishnakumar Kunnath (23 August 1968 - 31 May 2022), popularly known as
+                KK, was an
+                Indian playback
+                singer. He recorded songs in several languages, including Hindi, Tamil, Telugu, Kannada, Malayalam,
+                Marathi, Odia, Bengali, Assamese and Gujarati.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KK began his career by singing advertisement jingles, and made his film
+                debut with an A.R. Rahman
+                soundtrack. In 1999, he launched his debut album titled Pal. The songs "Pal" and "Yaaron" from the album
+                Pal became very popular and are commonly used in school farewells. His popular songs included "Tadap
+                Tadap Ke Is Dil Se" from Hum Dil De Chuke Sanam (1999), the Tamil song "Apadi Podu", "Dola Re Dola" from
+                Devdas (2002), "Kya Mujhe Pyaar Hai" from Woh Lamhe... (2006), "Aankhon Mein Teri" from Om Shanti Om
+                (2007), "Khuda Jane" from Bachna Ae Haseeno (2008), "Piya Aaye Na" from Aashiqui 2 (2013), "Mat Aazma
+                Re" from Murder 3 (2013), "India Wale" from Happy New Year (2014) and "Tu Jo Mila" from Bajrangi
+                Bhaijaan (2015).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On 31 May 2022, KK performed a live music concert in the Gurudas College
+                festival at Nazrul Mancha
+                auditorium, in South Kolkata.[39] After the concert, he returned to his hotel in Esplanade. He
+                complained of feeling unwell soon after his performance on the way back to his hotel, where he had a
+                cardiac arrest. He collapsed, and efforts to revive him at the hotel were unsuccessful.[40] He was
+                rushed to Calcutta Medical Research Institute (CMRI) at around 10:30 pm, where he was declared
+                dead.[41][42] He was 53 years old at the time of his death.</p>
+        </section>
+        <section id="tribute">
+            <p><b>Send Your Tribute</b></p>
+            <form id="tribute-form">
+                <input type="text" id="tributeEdit" placeholder="Add your tribute here">
+                <input type="text" id="tributeShown" readonly>
+                <input type="submit" id="addTribute">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            Tribute page by Shivam
+        </div>
+    </footer>
+    <script>
+        const tributeForm = document.getElementById('tribute-form');
+        const tributeEdit = document.getElementById('tributeEdit');
+        const tributeShown = document.getElementById('tributeShown');
+        tributeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (tributeEdit.value) {
+                tributeShown.value = tributeEdit.value;
+            }
+        })
+    </script>
+</body>
+
+</html>
